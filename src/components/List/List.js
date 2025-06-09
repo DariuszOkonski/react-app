@@ -9,9 +9,15 @@ const List = () => {
       <p>Interesting things I want to check out</p>
 
       <section>
-        <article>Books</article>
-        <article>Movies</article>
-        <article>Games</article>
+        <article>
+          <h2>Books</h2>
+        </article>
+        <article>
+          <h2>Movies</h2>
+        </article>
+        <article>
+          <h2>Games</h2>
+        </article>
       </section>
     </div>
   );
