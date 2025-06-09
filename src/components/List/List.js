@@ -4,7 +4,9 @@ const List = () => {
   return (
     <div>
       <header>
-        Things to do <span>soon</span>
+        <h2>
+          Things to do <span>soon</span>
+        </h2>
       </header>
       <p>Interesting things I want to check out</p>
 
