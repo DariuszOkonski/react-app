@@ -1,0 +1,26 @@
+.columnForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 740px) {
+    flex-direction: column;
+    align-items: stretch;
+
+    label {
+      display: flex;
+      // justify-content: stretch;
+      align-items: center;
+
+      input {
+        flex-grow: 1;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.labelDescription {
+  display: inline-block;
+  padding: 10px;
+}
