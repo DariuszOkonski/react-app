@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Column from '../Column/Column';
 import styles from './List.module.scss';
+import ColumnForm from '../ColumnForm/ColumnForm';
 import shortid from 'shortid';
 
 const List = () => {
@@ -9,12 +10,9 @@ const List = () => {
     { id: 2, title: 'Movies', icon: 'film' },
     { id: 3, title: 'Games', icon: 'gamepad' },
   ]);
-  const [value, setValue] = useState('');
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setColumns([...columns, { id: shortid(), title: value }]);
-    setValue('');
+  const addColumn = (newColumn) => {
+    setColumns([...columns, { id: shortid(), title: newColumn.title }]);
   };
 
   return (
@@ -34,14 +32,7 @@ const List = () => {
         ))}
       </section>
 
-      <form onSubmit={handleSubmit}>
-        <input
-          type='text'
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
-        />
-        <button>Add column</button>
-      </form>
+      <ColumnForm action={addColumn} />
     </div>
   );
 };
