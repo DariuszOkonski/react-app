@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import styles from './ColumnForm.module.scss';
+import Button from '../Button/Button';
+import TextInput from '../TextInput/TextInput';
 
 const ColumnForm = (props) => {
   const [title, setTitle] = useState('');
@@ -16,21 +18,13 @@ const ColumnForm = (props) => {
     <form onSubmit={handleSubmit}>
       <label>
         Title:
-        <input
-          type='text'
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        />
+        <TextInput value={title} onChange={(e) => setTitle(e.target.value)} />
       </label>
       <label>
         Icon:
-        <input
-          type='text'
-          value={icon}
-          onChange={(e) => setIcon(e.target.value)}
-        />
+        <TextInput value={icon} onChange={(e) => setIcon(e.target.value)} />
       </label>
-      <button>Add column</button>
+      <Button>Add column</Button>
     </form>
   );
 };
