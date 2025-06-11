@@ -38,7 +38,12 @@ const List = () => {
   const addColumn = (newColumn) => {
     setColumns([
       ...columns,
-      { id: shortid(), title: newColumn.title, icon: newColumn.icon },
+      {
+        id: shortid(),
+        title: newColumn.title,
+        icon: newColumn.icon,
+        cards: [],
+      },
     ]);
   };
 
@@ -55,7 +60,13 @@ const List = () => {
 
       <section className={styles.columns}>
         {columns.map((column) => (
-          <Column key={column.id} title={column.title} icon={column.icon} />
+          <Column
+            key={column.id}
+            id={column.id}
+            title={column.title}
+            icon={column.icon}
+            cards={column.cards}
+          />
         ))}
       </section>
 
