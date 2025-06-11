@@ -1,9 +1,8 @@
 import Card from '../Card/Card';
+import CardForm from '../CardForm/CardForm';
 import styles from './Column.module.scss';
 
 const Column = (props) => {
-  console.log(props.cards);
-
   return (
     <article className={styles.column}>
       <h2 className={styles.title}>
@@ -15,6 +14,8 @@ const Column = (props) => {
           <Card key={card.id} title={card.title} />
         ))}
       </ul>
+
+      <CardForm />
     </article>
   );
 };

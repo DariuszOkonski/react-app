@@ -1,6 +1,8 @@
 @import './settings.scss';
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -14,10 +16,16 @@ body {
   letter-spacing: 0.5px;
 }
 
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
 :global(.container) {
   width: 90%;
   max-width: 1400px;
   margin: 0 auto;
 }
 
-@import "./typography.scss";
+@import './typography.scss';
