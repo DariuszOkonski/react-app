@@ -4,7 +4,9 @@ import CardForm from '../CardForm/CardForm';
 import styles from './Column.module.scss';
 
 const Column = (props) => {
-  const cards = useSelector((state) => state.cards);
+  const cards = useSelector((state) =>
+    state.cards.filter((card) => card.columnId === props.id)
+  );
 
   return (
     <article className={styles.column}>
