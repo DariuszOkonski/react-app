@@ -4,6 +4,11 @@ import shortid from 'shortid';
 
 const reducer = (state, action) => {
   switch (action.type) {
+    case 'UPDATE_SEARCHSTRING':
+      return {
+        ...state,
+        searchString: action.payload,
+      };
     case 'ADD_COLUMN':
       return {
         ...state,
