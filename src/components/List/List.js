@@ -5,9 +5,6 @@ import styles from './List.module.scss';
 
 const List = () => {
   const columns = useSelector((state) => state.columns);
-
-  console.log(columns);
-
   return (
     <div className={styles.list}>
       <header className={styles.header}>
