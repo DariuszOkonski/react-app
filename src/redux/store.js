@@ -7,7 +7,7 @@ const reducer = (state, action) => {
     case 'ADD_COLUMN':
       return {
         ...state,
-        columns: [...state.columns, { ...action.newColumn, id: shortid() }],
+        columns: [...state.columns, { ...action.payload, id: shortid() }],
       };
     default:
       return state;

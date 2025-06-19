@@ -15,7 +15,7 @@ const ColumnForm = () => {
 
     dispatch({
       type: 'ADD_COLUMN',
-      newColumn: { title, icon },
+      payload: { title, icon },
     });
 
     setTitle('');
