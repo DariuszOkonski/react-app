@@ -22,7 +22,7 @@ const List = () => {
         ))}
       </section>
 
-      <ColumnForm action={() => undefined} />
+      <ColumnForm />
     </div>
   );
 };
