@@ -33,6 +33,7 @@ const store = createStore(
 
 export default store;
 
+// selectors
 export const getFilteredCards = ({ cards, searchString }, columnId) =>
   cards.filter(
     (card) =>
@@ -40,3 +41,6 @@ export const getFilteredCards = ({ cards, searchString }, columnId) =>
   );
 
 export const getAllColumns = (state) => state.columns;
+
+// action creators
+export const addColumn = (payload) => ({ type: 'ADD_COLUMN', payload });
