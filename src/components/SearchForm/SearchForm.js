@@ -3,6 +3,7 @@ import Button from '../Button/Button';
 import TextInput from '../TextInput/TextInput';
 import styles from './SearchForm.module.scss';
 import { useState } from 'react';
+import { updateSearchString } from '../../redux/store';
 
 const SearchForm = () => {
   const [searchInput, setSearchInput] = useState('');
@@ -13,7 +14,7 @@ const SearchForm = () => {
     e.preventDefault();
     if (!searchInput) return;
 
-    dispatch({ type: 'UPDATE_SEARCHSTRING', payload: searchInput });
+    dispatch(updateSearchString(searchInput));
     setSearchInput('');
   };
 
