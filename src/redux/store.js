@@ -31,3 +31,10 @@ const store = createStore(
 );
 
 export default store;
+
+export const getFilteredCards = (state, columnId) =>
+  state.cards.filter(
+    (card) =>
+      card.columnId === columnId &&
+      card.title.toLowerCase().includes(state.searchString.toLowerCase())
+  );
