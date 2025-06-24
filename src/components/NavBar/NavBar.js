@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Container from '../Container/Container';
 import styles from './NavBar.module.scss';
 
@@ -6,18 +7,18 @@ function NavBar() {
     <nav className={styles.navbar}>
       <Container>
         <div className={styles.navbarContainer}>
-          <a href='/'>
+          <Link to='/'>
             <i className='fa fa-tasks'></i>
-          </a>
+          </Link>
           <ul>
             <li>
-              <a href='/'>Home</a>
+              <Link to='/'>Home</Link>
             </li>
             <li>
-              <a href='/favorite'>Favorite</a>
+              <Link to='/favorite'>Favorite</Link>
             </li>
             <li>
-              <a href='/about'>About</a>
+              <Link to='/about'>About</Link>
             </li>
           </ul>
         </div>
