@@ -1,3 +1,4 @@
+import { Route, Routes } from 'react-router-dom';
 import Container from './components/Container/Container';
 import NavBar from './components/NavBar/NavBar';
 import About from './pages/About/About';
@@ -9,9 +10,11 @@ function App() {
     <main>
       <NavBar />
       <Container>
-        <Home />
-        <About />
-        <Favorite />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/favorite' element={<Favorite />} />
+        </Routes>
       </Container>
     </main>
   );
