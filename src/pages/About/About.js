@@ -1,9 +1,10 @@
 import React from 'react';
+import PageTitle from '../../components/PageTitle/PageTitle';
 
 const About = () => {
   return (
     <div>
-      <h1>About</h1>
+      <PageTitle>About</PageTitle>
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit
         perferendis cupiditate dolores doloribus nobis quia voluptas dignissimos
