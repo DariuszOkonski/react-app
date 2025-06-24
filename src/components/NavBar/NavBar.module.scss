@@ -1,0 +1,27 @@
+.navbar {
+  background-color: #292e39;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.4rem 0.2rem;
+  }
+}
+
+.navbarContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  i {
+    font-size: 24px;
+  }
+
+  ul {
+    display: flex;
+  }
+}
