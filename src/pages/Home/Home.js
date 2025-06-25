@@ -9,7 +9,6 @@ function Home() {
     <React.Fragment>
       <Hero />
       <SearchForm />
-
       <Lists />
     </React.Fragment>
   );

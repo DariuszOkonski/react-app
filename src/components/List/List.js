@@ -3,19 +3,16 @@ import Column from '../Column/Column';
 import ColumnForm from '../ColumnForm/ColumnForm';
 import styles from './List.module.scss';
 import { getColumnsByList, getListById } from '../../redux/store';
+import { useParams } from 'react-router-dom';
 
 const List = () => {
-  const TEMP_LIST_ID = 1;
+  const { listId } = useParams();
 
-  const listData = useSelector(({ lists }) =>
-    getListById({ lists }, TEMP_LIST_ID)
-  );
+  const listData = useSelector(({ lists }) => getListById({ lists }, listId));
 
   const columns = useSelector(({ columns }) =>
-    getColumnsByList({ columns }, TEMP_LIST_ID)
+    getColumnsByList({ columns }, listId)
   );
-
-  console.log('listData: ', listData);
 
   return (
     <div className={styles.list}>
