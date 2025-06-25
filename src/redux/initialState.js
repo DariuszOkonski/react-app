@@ -11,17 +11,26 @@ const initialState = {
   columns: [
     {
       id: 1,
+      listId: 1,
       title: 'Books',
       icon: 'book',
     },
     {
       id: 2,
+      listId: 1,
       title: 'Movies',
       icon: 'film',
     },
     {
       id: 3,
+      listId: 1,
       title: 'Games',
+      icon: 'gamepad',
+    },
+    {
+      id: 4,
+      listId: 2,
+      title: 'My Favorite Games',
       icon: 'gamepad',
     },
   ],
@@ -33,6 +42,7 @@ const initialState = {
     { id: 4, columnId: 2, title: 'Star Wars' },
     { id: 5, columnId: 3, title: 'The Witcher' },
     { id: 6, columnId: 3, title: 'Skyrim' },
+    { id: 7, columnId: 3, title: 'Star Wars' },
   ],
 };
 
