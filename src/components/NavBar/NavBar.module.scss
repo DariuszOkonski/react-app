@@ -1,14 +1,19 @@
+@import '../../styles/settings.scss';
+
 .navbar {
-  background-color: #292e39;
-  color: #fff;
+  background-color: darken($color-dark, 4%);
+  color: $color-light;
   font-size: 16px;
   padding: 10px;
 
   a {
-    color: #fff;
+    color: $color-light;
     text-decoration: none;
     display: inline-block;
     padding: 0.4rem 0.2rem;
+  }
+  a.linkActive {
+    color: $color-warning;
   }
 }
 
