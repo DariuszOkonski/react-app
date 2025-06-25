@@ -2,11 +2,18 @@ import { useSelector } from 'react-redux';
 import Column from '../Column/Column';
 import ColumnForm from '../ColumnForm/ColumnForm';
 import styles from './List.module.scss';
-import { getAllColumns, getListById } from '../../redux/store';
+import { getColumnsByList, getListById } from '../../redux/store';
 
 const List = () => {
-  const listData = useSelector(({ lists }) => getListById({ lists }, 1));
-  const columns = useSelector(getAllColumns);
+  const TEMP_LIST_ID = 1;
+
+  const listData = useSelector(({ lists }) =>
+    getListById({ lists }, TEMP_LIST_ID)
+  );
+
+  const columns = useSelector(({ columns }) =>
+    getColumnsByList({ columns }, TEMP_LIST_ID)
+  );
 
   console.log('listData: ', listData);
 
