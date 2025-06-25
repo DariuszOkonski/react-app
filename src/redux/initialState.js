@@ -30,8 +30,8 @@ const initialState = {
     {
       id: 4,
       listId: 2,
-      title: 'My Favorite Games',
-      icon: 'gamepad',
+      title: 'Songs',
+      icon: 'music',
     },
   ],
 
@@ -42,7 +42,6 @@ const initialState = {
     { id: 4, columnId: 2, title: 'Star Wars' },
     { id: 5, columnId: 3, title: 'The Witcher' },
     { id: 6, columnId: 3, title: 'Skyrim' },
-    { id: 7, columnId: 3, title: 'Star Wars' },
   ],
 };
 
