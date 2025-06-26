@@ -71,3 +71,7 @@ export const updateSearchString = (payload) => ({
   payload,
 });
 export const addList = (payload) => ({ type: 'ADD_LIST', payload });
+export const toggleCard = (payload) => ({
+  type: 'TOGGLE_CARD_FAVORITE',
+  payload,
+});

@@ -1,7 +1,13 @@
+import { useDispatch } from 'react-redux';
 import styles from './Card.module.scss';
+import { toggleCard } from '../../redux/store';
 
 const Card = (props) => {
-  console.log(props.id);
+  const dispatch = useDispatch();
+
+  const handleClick = () => {
+    dispatch(toggleCard(props.id));
+  };
 
   return (
     <li className={styles.card}>
@@ -9,6 +15,7 @@ const Card = (props) => {
       <i
         style={props.isFavorite ? { color: '#e1644e' } : {}}
         className='fa fa-star-o'
+        onClick={handleClick}
       ></i>
     </li>
   );
