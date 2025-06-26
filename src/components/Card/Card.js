@@ -1,7 +1,7 @@
 import styles from './Card.module.scss';
 
 const Card = (props) => {
-  console.log(props.isFavorite);
+  console.log(props.id);
 
   return (
     <li className={styles.card}>
