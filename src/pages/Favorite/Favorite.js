@@ -13,7 +13,7 @@ function Favorite() {
       <PageTitle>Favorite</PageTitle>
       <div className={styles.favoriteContainer}>
         {favoriteCards.map((card) => (
-          <Card key={card.id} title={card.title} />
+          <Card key={card.id} title={card.title} isFavorite={card.isFavorite} />
         ))}
       </div>
     </div>

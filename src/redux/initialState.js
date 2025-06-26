@@ -51,7 +51,7 @@ const initialState = {
     { id: '3', columnId: '2', isFavorite: true, title: 'Harry Potter' },
     { id: '4', columnId: '2', isFavorite: false, title: 'Star Wars' },
     { id: '5', columnId: '3', isFavorite: false, title: 'The Witcher' },
-    { id: '6', columnId: '3', isFavorite: false, title: 'Skyrim' },
+    { id: '6', columnId: '3', isFavorite: true, title: 'Skyrim' },
   ],
 };
 
