@@ -20,6 +20,11 @@ const reducer = (state, action) => {
         ...state,
         cards: [...state.cards, { ...action.payload, id: shortid() }],
       };
+    case 'ADD_LIST':
+      return {
+        ...state,
+        lists: [...state.lists, { ...action.payload, id: shortid() }],
+      };
     default:
       return state;
   }
@@ -54,3 +59,4 @@ export const updateSearchString = (payload) => ({
   type: 'UPDATE_SEARCHSTRING',
   payload,
 });
+export const addList = (payload) => ({ type: 'ADD_LIST', payload });
