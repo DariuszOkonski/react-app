@@ -5,9 +5,6 @@ import { Link } from 'react-router-dom';
 
 function Lists() {
   const lists = useSelector(getAllLists);
-
-  console.log(lists);
-
   return (
     <div className={styles.lists}>
       <h2 className={styles.heading}>Browse lists</h2>
