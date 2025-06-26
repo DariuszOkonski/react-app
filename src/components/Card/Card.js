@@ -1,11 +1,10 @@
 import styles from './Card.module.scss';
 
 const Card = (props) => {
-  console.log(props.title);
   return (
     <li className={styles.card}>
       {props.title}
-      <button>star</button>
+      <i className='fa fa-star-o'></i>
     </li>
   );
 };
