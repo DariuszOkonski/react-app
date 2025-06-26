@@ -1,16 +1,20 @@
 import React from 'react';
 import PageTitle from '../../components/PageTitle/PageTitle';
+import { getFavoriteCards } from '../../redux/store';
+import { useSelector } from 'react-redux';
+import Card from '../../components/Card/Card';
 
 function Favorite() {
+  const favoriteCards = useSelector(getFavoriteCards);
+
   return (
     <div>
       <PageTitle>Favorite</PageTitle>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam,
-        laudantium iste incidunt eius mollitia, assumenda iure maiores cumque
-        possimus nisi repellat, corrupti nam impedit nihil eveniet inventore
-        praesentium molestiae soluta.
-      </p>
+      <div>
+        {favoriteCards.map((card) => (
+          <Card key={card.id} title={card.title} />
+        ))}
+      </div>
     </div>
   );
 }
