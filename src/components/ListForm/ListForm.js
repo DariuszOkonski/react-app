@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addList } from '../../redux/store';
 import TextInput from '../TextInput/TextInput';
 import styles from '../ColumnForm/ColumnForm.module.scss';
 import Button from '../Button/Button';
+import { addList } from '../../redux/listsRedux';
 
 function ListForm() {
   const [title, setTitle] = useState('');
