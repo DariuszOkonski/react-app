@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import styles from './Card.module.scss';
-import { toggleCard } from '../../redux/store';
+import { toggleCard } from '../../redux/cardsRedux';
 
 const Card = (props) => {
   const dispatch = useDispatch();
