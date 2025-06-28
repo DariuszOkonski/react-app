@@ -21,15 +21,3 @@ const store = createStore(
 );
 
 export default store;
-
-// selectors
-
-export const getSearchString = (state) => state.searchString;
-export const getFavoriteCards = (state) =>
-  state.cards.filter((card) => card.isFavorite);
-
-// action creators
-export const updateSearchString = (payload) => ({
-  type: 'UPDATE_SEARCHSTRING',
-  payload,
-});

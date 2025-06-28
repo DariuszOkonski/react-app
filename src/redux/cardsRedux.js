@@ -22,6 +22,8 @@ export const getFilteredCards = ({ cards, searchString }, columnId) =>
     (card) =>
       card.columnId === columnId && strContains(card.title, searchString)
   );
+export const getFavoriteCards = (state) =>
+  state.cards.filter((card) => card.isFavorite);
 
 // actions
 const createActionName = (actionName) => `app/cards/${actionName}`;

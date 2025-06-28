@@ -1,10 +1,10 @@
 import React from 'react';
 import PageTitle from '../../components/PageTitle/PageTitle';
-import { getFavoriteCards } from '../../redux/store';
 import { useSelector } from 'react-redux';
 import Card from '../../components/Card/Card';
 import styles from './Favorite.module.scss';
 import { Navigate } from 'react-router-dom';
+import { getFavoriteCards } from '../../redux/cardsRedux';
 
 function Favorite() {
   const favoriteCards = useSelector(getFavoriteCards);
