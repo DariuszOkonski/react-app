@@ -3,8 +3,8 @@ import styles from './ColumnForm.module.scss';
 import Button from '../Button/Button';
 import TextInput from '../TextInput/TextInput';
 import { useDispatch } from 'react-redux';
-import { addColumn } from '../../redux/store';
 import { useParams } from 'react-router-dom';
+import { addColumn } from '../../redux/columnsRedux';
 
 const ColumnForm = () => {
   const dispatch = useDispatch();

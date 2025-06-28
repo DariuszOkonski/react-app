@@ -29,16 +29,12 @@ export const getFilteredCards = ({ cards, searchString }, columnId) =>
     (card) =>
       card.columnId === columnId && strContains(card.title, searchString)
   );
-export const getAllColumns = (state) => state.columns;
 
-export const getColumnsByList = ({ columns }, listId) =>
-  columns.filter((column) => column.listId === listId);
 export const getSearchString = (state) => state.searchString;
 export const getFavoriteCards = (state) =>
   state.cards.filter((card) => card.isFavorite);
 
 // action creators
-export const addColumn = (payload) => ({ type: 'ADD_COLUMN', payload });
 export const addCard = (payload) => ({ type: 'ADD_CARD', payload });
 export const updateSearchString = (payload) => ({
   type: 'UPDATE_SEARCHSTRING',
